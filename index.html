@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8">
+<!--     <meta name="viewport" content="width=device-width"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=2.0">
+
+    <title>repl.it</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+		
+		
+	<style> /* css/js in Html */
+		
+	/*basic utilities*/
+	*{
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	}
+	body {
+		font-family: Garamond, serif;
+		overflow-x: hidden !important;
+	/*  font-family: 'Macando', cursive; */
+	}
+	a { text-decoration: none; 
+	}
+	li {
+	 list-style: none;
+	}
+	.cursor {
+	 
+	  cursor:url(mouse2.png), auto;
+	}
+	
+		/* NAVBAR STYLING STARTS */
+	.navbar { /*parent container for nav */
+		background-color: black;
+	/* 	change to lightblue */
+		opacity: 1;
+/* 		background-attachment: s; */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-size: 10 px;
+		display: flex;
+		padding: 1px 1px;
+		flex-flow: row nowrap; /*how the children boxes will be placed -->, all children will stay on one line  */
+		justify-content: space-around;
+	/* 	text-align: center; */
+	/* 	flex-flow: row wrap; */
+		align-items: center; 
+	/* 	align-self: flex-end; */
+	/* 	padding: 1px 10px; */
+		
+	/*  	background-color: aliceblue; /*placeholder--to test */ 
+	/* 	color: floralwhite; */
+	}
+
+	.nav-links nl {
+	 color: white;
+	}
+	/* LOGO */
+	.logo {
+	display:flex;
+	justify-items: center;
+	align-self: flex-start;
+	flex-shrink: 3;
+	left-margin: 50px;
+	/* image: clearPaintifyLogo.png */
+	/* overflow; */
+	}
+	/* NAVBAR MENU */
+	.menu {
+	 display: flex;	
+	 order: revert-layer;
+	 justify-items: center;
+	/*  padding-right: 10 px; */
+	 align-self: flex-end;
+	 gap: 4em; /*gap beteween both boxes*/
+	 font-size: 30px;
+	}
+	.menu ml:hover {
+	 background-color: rebeccapurple;
+	 border-radius: 100px;
+	 transition: 0.10s ease;
+	}
+	.menu li { /*nav bars section size */
+	 padding: 100px 14px;
+	}
+	
+	.sticky {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
+	.sticky + .content {
+	  padding-top: 60px;
+	}
+
+		
+  .hero-section {
+		padding-top: 100px;
+/* 			top padding: 150px; */
+		padding-left: 50px;
+		padding-bottom: 100px;
+	}
+	.welcome { 
+		display:flex;
+		justify-content: flex-end;
+		align items: center;
+		flex-flow: column wrap;
+		background-color: lightblue;
+	/* 	background-color: lightblue; */
+/* 		top-padding: 75px; */
+	/*	padding-left: 50px */
+	/* 	height:400px; */
+	/* 	padding: 100px 100px; */
+	/* 	height: 700px; */
+	}
+		.rotate {
+    position: absolute;
+		z-index: 50;
+ /* 		help position the pallett */
+		bottom: 10%;
+/*     top: 40%;  */
+    right: 5%;
+/* position:fixed; */
+/* 		left: 0%; */
+	  animation: rotation 8s infinite linear;
+/* 	}
+	.palleto {
+  width: 5vw;
+  z-index: 10;
+  position: fixed;
+  left: 1%;
+  bottom: 1%;
+  padding: 0;
+} */
+	
+	@keyframes rotation {
+	  from {
+	    transform: rotate(0deg);
+	  }
+	  to {
+	    transform: rotate(359deg);
+	  }
+	}
+	.welcome logo {
+		display:flex;
+		padding:102px, 12 px;
+    position: relative;
+	}	
+	.welcome pallet{
+/* 		display: flex; */
+	/* 	flex-direction: r; */
+		justify-content: flex-end;
+		align-self: center;
+	}
+/* 	.games{
+		display:flex;
+		background: blueviolet;
+		flex-flow: row wrap;
+	} */
+	.games {
+/* 	background: var(--background-secondary); */
+	
+	background:cadetblue;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 50px;
+	margin-top: 50px;
+	background-size: cover;
+	
+	
+}
+
+.games .container {
+	background: white;
+/* 	background:cadetblue;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 50px;
+	margin-top: 50px;
+	background-size: cover; */
+}
+
+.games .container .inner {
+	display: flex;
+	gap: 50px;
+	margin-right: auto;
+}
+
+.games .container .inner .game {
+	padding: 30px;
+	border-radius: 4px;
+	width: 400px;
+	height: 400px;
+	background: var(--background-primary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 20px;
+	box-shadow: 2px 2px 20px rgba(0 0 0 / 10%);
+	transition: 0.2s;
+	top: 0;
+	position: relative;
+}
+
+.games .container .inner .service:hover {
+	box-shadow: 2px 2px 20px rgba(0 0 0 / 80%);
+	top: -10px;
+}
+
+.games button {
+	margin-top: 50px;
+}
+
+
+
+	</style>
+		
+<script src="//ajax.googleapis.com/ajax/libs/ jquery/1.11.3/jquery.min.js"></script>
+<script>
+	$ (function() {
+	var rotation = 0,
+	scroll Loc = $(document).scrollTop();
+	$(window).scroll(function() { var newLoc = $(document).scrollTop(); var diff scrollLoc - newLoc; rotation + diff, scrollLoc= newLoc; var rotationStr = "rotate(" + rotation +
+	"deg)";
+	$("rotate").css({
+	"-webkit-transform": rotationStr, "-moz-transform": rotationStr,
+	"transform": rotationStr});
+	});
+	})
+</script>
+
+
+</head>
+
+
+	
+<body>
+<div class= "cursor">
+<!-- navbar starts -->
+	<nav class="navbar">
+  <!-- LOGO -->
+		<div class="logo">
+			<img src="tri.png" width="200" >
+		</div>
+	
+	<!-- 	</div> end of logo -->
+		<ul class="nav-links"> 
+		  <div class="menu">
+				<ml>
+					<nl href="/">
+						GAMES 
+					</nl>
+				</ml>
+				<ml>
+		     <nl href="/">
+					ABOUT
+				 </nl>
+			  </ml>
+			</div>
+		</ul>
+	</nav>
+ 
+<!-- navbar ends -->
+<!--Welcome Page-->
+<div class= "welcome" id="elemts">
+
+  <div class="hero-section">
+    <h1 style= "font-size:7vw"> Welcome to </h1>
+	<logo>
+	<img src= "tri.png"  />
+	
+  </logo>
+		
+	<img src="images/pallets.png" class="rotate" id= "palleto" width="250"/>
+  </div>
+</div>	
+<!--Welcome Page-->
+<section class="games" id="games">
+	<h1> Games </h1>
+	<div class="container">
+		<div class="inner">
+			<div class="game slide-in">
+				<h4>CaleVdar</h4>
+				<img src="mouse2.png">
+				<p>trial</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+</body>
+<!-- </div> -->
+</html>

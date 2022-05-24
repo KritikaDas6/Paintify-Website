@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+.module {
+  cursor: url('temp.png'), auto;	
+}
+
+root
+  --font-size 3rem
+
+@media(min-width 768px)
+  :root
+    --font-size 5rem
+
+
+
+
+.roulette
+  position relative
+  .word[data-scroll='in']
+    animation rotate 2.5s .25s infinite linear
+  .word
+    display block
+    height 100%
+    width 100%
+    height var(--font-size)
+    width var(--font-size)
+  .char
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) rotate(calc((var(--char-index) * (360 / var(--char-total)) * 1deg))) translate(0, -150%)
+  @keyframes rotate
+    to
+      transform rotate(-360deg)
