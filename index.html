@@ -30,16 +30,13 @@
 	 list-style: none;
 	}
 	.cursor {
-	 
 	  cursor:url(mouse2.png), auto;
 	}
 	
 		/* NAVBAR STYLING STARTS */
 	.navbar { /*parent container for nav */
 		background-color: black;
-	/* 	change to lightblue */
 		opacity: 1;
-/* 		background-attachment: s; */
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -90,16 +87,15 @@
 	 padding: 100px 14px;
 	}
 	
-	.sticky {
+/* 	.sticky {
 	  position: fixed;
 	  top: 0;
 	  width: 100%;
 	}
 	.sticky + .content {
 	  padding-top: 60px;
-	}
-
-		
+	} */
+	
   .hero-section {
 		padding-top: 100px;
 /* 			top padding: 150px; */
@@ -119,16 +115,15 @@
 	/* 	padding: 100px 100px; */
 	/* 	height: 700px; */
 	}
-		.rotate {
+	.rotate {
     position: absolute;
-		z-index: 50;
- /* 		help position the pallett */
+/* 		help position the pallett */
 		bottom: 10%;
 /*     top: 40%;  */
     right: 5%;
-/* position:fixed; */
 /* 		left: 0%; */
 	  animation: rotation 8s infinite linear;
+	}
 /* 	}
 	.palleto {
   width: 5vw;
@@ -158,11 +153,6 @@
 		justify-content: flex-end;
 		align-self: center;
 	}
-/* 	.games{
-		display:flex;
-		background: blueviolet;
-		flex-flow: row wrap;
-	} */
 	.games {
 /* 	background: var(--background-secondary); */
 	
@@ -213,15 +203,13 @@
 }
 
 .games .container .inner .service:hover {
-	box-shadow: 2px 2px 20px rgba(0 0 0 / 80%);
+	box-shadow: 2px 2px 20px rgba(0 0 0 / 20%);
 	top: -10px;
 }
 
 .games button {
 	margin-top: 50px;
 }
-
-
 
 	</style>
 		
@@ -252,8 +240,6 @@
 		<div class="logo">
 			<img src="tri.png" width="200" >
 		</div>
-	
-	<!-- 	</div> end of logo -->
 		<ul class="nav-links"> 
 		  <div class="menu">
 				<ml>
@@ -277,14 +263,14 @@
   <div class="hero-section">
     <h1 style= "font-size:7vw"> Welcome to </h1>
 	<logo>
-	<img src= "tri.png"  />
+	<img src= "tri.png" >
 	
   </logo>
-		
-	<img src="images/pallets.png" class="rotate" id= "palleto" width="250"/>
+	<img src="images/pallets.png" class="rotate" width="400" />
   </div>
-</div>	
-<!--Welcome Page-->
+
+	
+<!--game Page-->
 <section class="games" id="games">
 	<h1> Games </h1>
 	<div class="container">
@@ -298,6 +284,5 @@
 	</div>
 </section>
 
-</body>
-<!-- </div> -->
+
 </html>
