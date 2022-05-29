@@ -18,3 +18,6 @@ How to rotate on scroll
 https://www.youtube.com/watch?v=_s3Po1IJm8Q&t=324s
 
 https://freefrontend.com/css-parallax/
+
+scrollbar chnage
+https://stackoverflow.com/questions/60009379/make-scrollbar-with-image-as-thumb-html-css
