@@ -1,0 +1,299 @@
+body{
+	background: #8357eb;
+}
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+name{
+	padding-top: 10px;
+	display:flex;
+	justify-content: center;
+	font-size: 100px;
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #d6f4f4;
+  font-variation-settings: "wght" 900, "ital" 1;
+/*   text-align: center; */
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #07bccc,
+    15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a,
+    25px 25px 0px #f40468,
+    45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+iframe{
+	display:block;
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 1250px;
+	height: 770px;
+}
+
+frame{
+	display: flex;
+	
+}
+
+name:hover {
+  font-variation-settings: "wght" 30, "ital" 0;
+  text-shadow: none;
+}
+
+
+/* card starts */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 100rem;
+
+ 
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: space-evenly;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 25px;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 280px;
+	height: 25rem;
+	border-radius: 25px;
+	color: black;
+	font-size: 1.5rem;
+}
+
+.back{
+  
+/*   background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%); */
+/*   background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%); */
+	display: block;
+/* 	 frontface-visibility: hidden; */
+/* opacity:.3; */
+/* 	filter: brightness(80%); */
+  background: linear-gradient(-45deg, #fda6cd,  #ffa7fb,  cyan,  #33ccff);
+	
+
+/* 	background: linear-gradient(-45deg,#07bccc, cyan, #f321d7, #f40468); */
+															
+												
+}
+
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+/*     opacity: .6; */
+/* 	  background: linear-gradient(-45deg, #f321d7, #ffec61); */
+
+background: linear-gradient(-45deg, #33ccff, cyan,  #ffa7fb, 	#fda6cd);
+														
+							
+	
+
+
+	
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 25px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 3rem;
+  height: 2px;
+  position: absolute;
+  background: floralwhite;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+	color: black;
+/*   color: rgba(255,255,255,0.7); */
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+/* hi */
+
+.games .container .inner .card {
+	background: linear-gradient(-45deg, #ffec61, #f321d7);
+/* 	padding: 1px;  */
+/* 	paddng-bottom: 50px; */
+	border-radius: 25px;
+	width: 250px;
+	height: 270px;
+/* 	background: var(--background-primary); */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 10px;
+	box-shadow: 2px 2px 20px rgba(0 0 0 / 10%);
+	transition: 0.8s;
+	top: 0;
+	position: relative;
+}
+
+
+
+
+
+
+
+.card__side--back-1 {
+  background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.card__side--back-2 {
+  background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+
+
+
+
+
